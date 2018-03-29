@@ -16,19 +16,17 @@ def startNewGame():
     newScore = (playerName.capitalize(), 0)
     scores.append(newScore)
 
-def menu():
-    running = True
-    while running == True:
-        print("Co chcesz zrobić?")
-        action = input("Start - zacznij nową grę, Top - pokaż najwyższe wyniki, End - zakończ: ")
-        if action.lower() == "start":
-            startNewGame()
-        elif action.lower() == "top":
-            showTopScores()
-        elif action.lower == "end":
-            exit(1)
-            ## to gówno nie działa ><
-
 ###MAIN
-menu()
 
+running = True
+while running == True:
+    print("Co chcesz zrobić?")
+    action = input("Start - zacznij nową grę, Top - pokaż najwyższe wyniki, End - zakończ: ")
+    if action.lower() == "start":
+        startNewGame()
+    elif action.lower() == "top":
+        showTopScores()
+    elif action.lower() == "end":
+        break
+    else:
+        print("Coś nie pykło")
